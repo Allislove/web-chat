@@ -31,17 +31,17 @@ console.log(webChat())
  * otras constantes
  */
 
-export const VisibilityFilters = {
-    SHOW_ALL: 'SHOW_ALL',
-    SHOW_COMPLETED: 'SHOW_COMPLETED',
-    SHOW_ACTIVE: 'SHOW_ACTIVE'
+export const optionFilters = {
+    DELETE_MESSAGE: 'DELETE_MESSAGE',
+    SHOW_BEST: 'SHOW_BEST',
+    RE_ENVIAR: 'RE_ENVIAR'
 }
 
 // Declaro una constante para reunir todos los
 // reductores y asi exportarlos para su posterior uso
 
 const allReducers = combineReducers({
-    VisibilityFilters,
+    optionFilters,
     webChat,
 
 })
