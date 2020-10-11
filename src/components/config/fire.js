@@ -14,7 +14,8 @@ import firebase from "firebase";
     measurementId: "G-9XDD3E0R1L"
 };
 
-// Inicializo firabase y tambien el analytics, y eso es todo tengo conectado mi app con firebase
+// Inicializo firabase y tambien el analytics, y eso es
+// ahora tengo conectado mi app con firebase
 const fire =  firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 

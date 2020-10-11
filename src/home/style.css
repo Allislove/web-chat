@@ -1,0 +1,21 @@
+.home-Container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.userIsLogged {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageArea {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

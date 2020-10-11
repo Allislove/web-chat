@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fire from '../components/config/fire';
+import MessageArea from '../components/MessageArea';
 
 
 class Home extends Component{
@@ -16,9 +17,17 @@ class Home extends Component{
     render()
     {
         return(
-            <div>
-                <h1>You are logged in !!!</h1>
-                <button onClick={this.logout}>Logout</button>
+            <div className="home-Container">
+                <div className="userIsLogged">
+                    <h1>Estas logeado!!</h1>
+                    <button onClick={this.logout}>Cerrar sesión</button>
+                </div>
+
+                <div className="messageArea">
+                    <MessageArea />
+
+                </div>
+
             </div>
         )
     }

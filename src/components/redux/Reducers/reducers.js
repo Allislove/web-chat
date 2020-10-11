@@ -1,39 +1,44 @@
 import {combineReducers} from 'redux';
-
+import messageArea from "../../MessageArea";
+//Reducer, recupera y organiza las acciones,
 
 const initialState = {
     message: {
         messages: [],
         inputMessage: ''
+
     },
-    payload: {
-        id: 'El usuario esta escribiendo un mensaje.'
-    }
+
 }
 
 
 const webChat = (state = initialState, action) => {
     switch(action.type) {
         case "SEND":
-            return {...state.message.inputMessage};
-
+            return {
+                ...state, messages: action.payload
+            };
         case "DELETE":
-            return { ...state [state.message.messages.slice()]};
+            return {
+                ...state, messages: action.payload.id
+            }
+        case "CAPTURE":
+            return state;
         default:
             return state;
     }
 }
 
-console.log(webChat())
+// console.log(webChat("SEND"))
 
 
 /*
  * otras constantes
  */
 
-export const optionFilters = {
+const optionFilters = {
     DELETE_MESSAGE: 'DELETE_MESSAGE',
-    SHOW_BEST: 'SHOW_BEST',
+    AS_FAVORITE: 'AS_FAVORITE',
     RE_ENVIAR: 'RE_ENVIAR'
 }
 
@@ -42,7 +47,7 @@ export const optionFilters = {
 
 const allReducers = combineReducers({
     optionFilters,
-    webChat,
+    webChat
 
 })
 

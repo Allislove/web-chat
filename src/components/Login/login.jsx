@@ -33,7 +33,7 @@ class Login extends Component {
     }
     render() {
         return (
-            <div className="container justify-content-center">
+            <div >
                 <div className="col-md-6">
                     <form>
                         <div className="form-group">
